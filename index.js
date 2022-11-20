@@ -1,5 +1,5 @@
 const Application = require('./framework/Application')
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 5001
 const userRouter = require('./src/user-router')
 const jsonParser = require('./framework/parseJson')
 const parseUrl = require('./framework/parseUrl')
@@ -8,7 +8,7 @@ const mongoose = require('mongoose')
 const app = new Application()
 
 app.use(jsonParser)
-app.use(parseUrl('http://localhost:5000'))
+app.use(parseUrl('http://localhost:5001'))
 
 app.addRouter(userRouter)
 
